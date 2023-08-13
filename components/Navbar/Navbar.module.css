@@ -248,6 +248,12 @@
   }
 }
 
+@media screen and (max-width: 645px) {
+  .blog__header-navbar_list-sign {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 473px) {
   .nav__menu-list.active {
     top: 1rem;
@@ -259,9 +265,5 @@
 
   .blog__header-navbar_logo {
     font-size: var(--FONT-SIZE-SM);
-  }
-
-  .blog__header-navbar_list-sign {
-    display: none;
   }
 }
