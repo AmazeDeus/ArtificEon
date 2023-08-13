@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+/* Various Colors, Fonts and Animation Styles */
+
+:root {
+  --font-family: "Manrope", sans-serif;
+  --FONT-FAMILY-BLOG: "Poppins", sans-serif;
+
+  /* Useful tool for gradients: angrytools.com/gradient */
+
+  --gradient-v1-color: -moz-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
+
+  --gradient-v2-color: -webkit-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
+
+  --gradient-v3-color: -o-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
+
+  --gradient-v4-color: -ms-radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
+
+  --gradient-v5-color: radial-gradient(
+    circle at 3% 25%,
+    rgba(0, 40, 83, 1) 0%,
+    rgba(4, 12, 24, 1) 100%
+  );
+
+  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+  --GRADIENT-COLOR: linear-gradient(
+    115deg,
+    #4fcf70,
+    #fad648,
+    #a767e5,
+    #12bcfe,
+    #44ce7b
+  );
+
+  /* COLORS */
+  --BGCOLOR: #0f172a;
+  --BORDER-COLOR: #fff;
+  --LIGHT-COLOR: #fff;
+  --LIGHT-COLOR-ALT: #afb6cd;
+  --DARK-COLOR: #040c18;
+  --color-footer: #031b34;
+  --color-blog: #042c54;
+  --color-text: #81afdd;
+  --color-light-text: #a3c4e6;
+  --color-subtext: #ff8a71;
+  --white: #e9e9e9;
+  --gray: #333;
+  --blue: #0367a6;
+  --lightblue: #008997;
+  --ERROR: firebrick;
+  --INACTIVE: #252830;
+  --LINK-COLOR: whitesmoke;
+  --LINK-HOVER: rgba(245, 245, 245, 0.9);
+  --NOTE-BGCOLOR: hsla(240, 64%, 27%, 0.65);
+  --STATUS-COMPLETE: limegreen;
+  --STATUS-OPEN: firebrick;
+  --TABLE-BGCOLOR: #131417;
+  --TABLE-COLOR: #afb6cd;
+  --PRIMARY-BACKGROUND-COLOR: #131417;
+  --SECONDARY-BACKGROUND-COLOR: #252830;
+  --HOVER-DARK-COLOR: var(--PRIMARY-BACKGROUND-COLOR);
+  --HOVER-LIGHT-COLOR: var(--LIGHT-COLOR);
+  --TRANSPARENT-LIGHT-COLOR: rgba(255, 255, 255, 0.05);
+  --TRANSPARENT-DARK-COLOR: rgba(0, 0, 0, 0.75);
+  --INPUT-INVALID: #F00;
+
+  /* @MEDIA SIZES */
+  --FONT-SIZE-XSM: 1.2rem;
+  --FONT-SIZE-SM: 1.6rem;
+  --FONT-SIZE-MD: 2.4rem;
+  --FONT-SIZE-LG: 3rem;
+  --FONT-SIZE-CL: 4rem;
+  --MARGIN-SM: 2rem;
+  --MARGIN-MD: 3rem;
+  --ITEM-MIN-HEIGHT-SM: 20rem;
+  --ITEM-MIN-HEIGHT-MD: 30rem;
+
+  /* SIZES */
+  --max-width: 758px;
+  --max-height: 420px;
+  --GAP: 2rem;
+
+  /* RADII */
+  --button-radius: 0.7rem;
+}
+
+body {
+  background: var(--DARK-COLOR);
+  color: var(--LIGHT-COLOR-ALT);
+  letter-spacing: 1px;
+  transition: background-color 0.25s, color 0.25s; /* transition animation for toggling between light/dark mode */
+}
+
+/* || THEME COLOR CHANGE - not implemented */
+body.light-theme {
+  --DARK-COLOR: #3d3d3d;
+  --LIGHT-COLOR-ALT: rgba(0, 0, 0, 0.6);
+  --PRIMARY-BACKGROUND-COLOR: #fff;
+  --SECONDARY-BACKGROUND-COLOR: #f1f1f1;
+  --HOVER-LIGHT-COLOR: #ffF;
+  --TRANSPARENT-DARK-COLOR: var(--SECONDARY-BACKGROUND-COLOR);
+  --TRANSPARENT-LIGHT-COLOR: rgba(0, 0, 0, 0.1);
+  --gradient-v1-color: #fff;
+  --gradient-v2-color: #fff;
+  --gradient-v3-color: #fff;
+  --gradient-v4-color: #fff;
+  --gradient-v5-color: #fff;
+}
+
+.gradient__bg {
+  background: var(--gradient-v1-color);
+  background: var(--gradient-v2-color);
+  background: var(--gradient-v3-color);
+  background: var(--gradient-v4-color);
+  background: var(--gradient-v5-color);
+}
+
+.rise-fall-animation {
+  animation: scanner-loop 3s ease-in-out infinite;
+}
+
+.scale-up-center {
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+.gradient__text {
+  background: var(--gradient-text);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scanner-loop {
+  0% {
+    bottom: 2rem;
+  }
+  50% {
+    bottom: 3rem;
+  }
+  100% {
+    bottom: 2rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 3s ease-in;
+}

@@ -1,0 +1,17 @@
+.quick-read__section-title {
+  position: relative;
+  font-size: var(--FONT-SIZE-MD);
+  margin-bottom: 6rem;
+  color: var(--LIGHT-COLOR);
+}
+
+.quick-read__section-title::after {
+  content: attr(data-name);
+  font-size: var(--FONT-SIZE-LG);
+  text-transform: uppercase;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: lightgray;
+}

@@ -1,0 +1,32 @@
+.popular-tags__container {
+  gap: var(--GAP);
+}
+
+.section-title {
+  position: relative;
+  font-size: var(--FONT-SIZE-MD);
+  margin-bottom: 6rem;
+}
+
+.section-title::after {
+  content: attr(data-name);
+  font-size: var(--FONT-SIZE-LG);
+  text-transform: uppercase;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  color: lightgray;
+}
+
+@media screen and (min-width: 700px) {
+  .popular-tags__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popular-tags__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

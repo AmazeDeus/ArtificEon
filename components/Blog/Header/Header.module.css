@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  padding: 1.25rem 2.5rem;
+  height: 10rem;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+}

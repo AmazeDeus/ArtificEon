@@ -1,0 +1,21 @@
+.older-posts__grid-wrapper__image-wrapper {
+  min-height: var(--ITEM-MIN-HEIGHT-SM);
+}
+
+.article {
+  background-color: var(--SECONDARY-BACKGROUND-COLOR);
+}
+
+.older-posts__grid-wrapper__image-wrapper {
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .article {
+    grid-template-columns: 25rem 1fr;
+  }
+
+  .older-posts__grid-wrapper__image-wrapper {
+    height: auto;
+  }
+}

@@ -1,0 +1,15 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcome a::before {
+  content: "➜ ";
+}
+
+@media screen and (max-width: 400px) {
+  .welcome h1 {
+    font-size: 2rem;
+  }
+}

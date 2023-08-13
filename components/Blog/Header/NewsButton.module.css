@@ -1,0 +1,23 @@
+.newsbtn__button {
+  padding: 0.75rem 1.25rem;
+  position: relative;
+  font-size: 0.875rem;
+  background-color: #1F2937;
+  color: #F7AB0A;
+  display: flex;
+  align-items: center;
+  border-radius: 9999px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .newsbtn__button {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+    .newsbtn {
+      display: none;
+    }
+  }

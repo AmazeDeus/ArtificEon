@@ -1,0 +1,157 @@
+/* Modifying specific global editor styles with :global // Mostly for the purpose of the print interface */
+
+.richEditor__wrapper-default_editor
+  > :global(.ql-container.ql-snow > .ql-editor) {
+  padding: 1in;
+  margin: 1rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+.richEditor__wrapper-default_editor > :global(.ql-container.ql-snow) {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.richEditor__wrapper-default_editor > :global(.ql-toolbar.ql-snow) {
+  border: none;
+  display: flex;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.richEditor__wrapper-default_editor
+  > :global(.ql-toolbar.ql-snow > .ql-formats) {
+  margin-right: 0;
+}
+
+.richEditor__wrapper-default_editor :global(.ql-indent-1:not(.ql-direction-rtl)) {
+  display: inline-block;
+}
+
+.richEditor__wrapper-default_editor ol {
+  padding-left: 0;
+  counter-increment: list-0;
+}
+
+.richEditor__wrapper-default_editor ol li {
+  counter-increment: none;
+}
+
+.richEditor__wrapper-default_editor ol li:not(.ql-direction-rtl) {
+  margin-bottom: 1rem;
+  padding-left: 0;
+}
+
+.richEditor__wrapper-default_editor ol li:before {
+  color: #fff
+}
+
+.richEditor__wrapper-default_editor
+  > :global(.ql-container.ql-snow > .ql-editor > p) {
+  text-align: left;
+}
+
+.richEditor__fallback {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.addPost-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-button {
+  margin-top: 1rem;
+}
+
+.form-button > div:nth-child(2){
+  background-color: rgba(0, 0, 0, 0.582);
+  color: firebrick;
+}
+
+.blog-post__save {
+  font-family: "Open Sans";
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+  color: var(--color-light-text);
+  border-radius: 0.25em;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.4);
+  margin-right: 1rem;
+  line-height: 40px;
+  transition: ease-in-out 0.2s;
+  padding: 0 1rem;
+}
+
+.blog-post__save {
+  background: rgba(0, 0, 0, 0.582);
+  line-height: 40px;
+}
+
+.blog-post__save button {
+  display: flex;
+  align-items: center;
+  line-height: 42.74px;
+}
+
+.blog-post__save a span,
+.blog-post__save button span {
+  font-size: 1rem;
+}
+
+.blog-post__save a svg,
+.blog-post__save button svg {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.blog-post__save:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 99999px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post__save:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  font-size: 2.5rem;
+  padding-right: 12px;
+  background: none;
+  color: #fff;
+}
+
+.form-note {
+  right: 0;
+  margin-right: 1rem;
+  position: absolute;
+}
+
+.errorText {
+  color: var(--ERROR);
+}
+
+/* Dictating the margin on the page when printing it */
+@page {
+  margin: 1in;
+}
+
+/* print specific styles for printing the page */
+/* Because it is taking up 1in of margin on every side, use the margin in the @page along with the margins below to dictate the width and height */
+
+@media print {
+  .richEditor__wrapper-default_editor
+    > :global(.ql-container.ql-snow > .ql-editor) {
+    width: 6.5in;
+    height: 9in !important;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+  .form__label-content,
+  .form-button,
+  .richEditor__wrapper-default_editor > :global(.ql-toolbar.ql-snow) {
+    display: none;
+  }
+}

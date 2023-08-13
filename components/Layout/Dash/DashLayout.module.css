@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || GENERAL STYLES */
+
+.main {
+  font-family: "Nunito", sans-serif;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: var(--BGCOLOR);
+  color: var(--COLOR);
+  background-image: url("/assets/blog03.png");
+  background-size: cover;
+  background-position: top right;
+  background-blend-mode: multiply;
+}
+
+.dash-container {
+  padding: 0.75em 0.5em 0.5em;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    font-size: 1.25rem;
+  }
+}

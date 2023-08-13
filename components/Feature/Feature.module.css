@@ -1,0 +1,97 @@
+.gpt3__features-container__feature {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+
+  margin: 1rem;
+}
+
+.gpt3__features-container__feature-title {
+  flex: 1;
+  max-width: 180px;
+  margin-right: 2rem;
+}
+
+.gpt3__features-container__feature-title h1 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #fff;
+}
+
+/* Normal title bar version */
+.gpt3__features-container__feature-title_bar {
+  width: 38px;
+  height: 3px;
+  background: var(--gradient-bar);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 0.25rem;
+}
+
+/* Title bar version with scanning and glow effect. Set barGlow prop to true when importing the Feature component if it should be used over the normal one */
+.gpt3__features-container__feature-title_fancybar {
+  width: 38px;
+  height: 3px;
+  position: absolute;
+  background-color: aqua;
+  box-shadow: 0px 0px 12px aqua;
+  margin-bottom: 0.25rem;
+  overflow: hidden;
+}
+
+.gpt3__features-container__feature-title_fancybar-scanner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 10px;
+  height: 100%;
+  border-radius: 50%;
+  animation: scanner-loop 3s ease-in-out infinite;
+}
+
+.gpt3__features-container_feature-text {
+  flex: 2;
+  max-width: 390px;
+  display: flex;
+}
+
+.gpt3__features-container_feature-text p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--color-text);
+}
+
+@media screen and (max-width: 550px) {
+  .gpt3__features-container__feature-title h1 {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .gpt3__features-container_feature-text p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .gpt3__features-container__feature {
+    margin: 1rem 0;
+  }
+}
+
+@keyframes scanner-loop {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 0;
+  }
+}
