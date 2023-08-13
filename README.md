@@ -1,8 +1,14 @@
 # ArtificEon
 
 ArtificEon is a Blog Website with Protected Routes and Pusher Integration. The Protected Admin route allows for Admins, Managers and Employees to create notes and assign new roles to different users. Pusher is integrated to allow for real-time communication between clients when creating or editing a Blog Post.
-
+<br><br><br>
 Protected Admin/Manager/Employee route is located at "/dash".
+<br><br><br>
+An Admin/Manager Account is Required in Order to Create/Edit/Delete a Blog Post.
+
+-> After Logging in, New Post Action Button can be Found at Route "/blog".
+
+-> Edit/Delete Action Button can be Found at Route "/blog/{blogSlug}/view".
 
 ## Installation
 
