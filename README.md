@@ -68,7 +68,7 @@ Other Environment Keys:
 
 ## Known Issues
 
-- There are no known issues at this time.
+- Currently there is an issue with how the Blog Post Editor unmounts. A brute force fix has been implemented by refreshing the page after being redirected away. This fix works until the underlying cause has been found.
 
 ## Contributing
 
