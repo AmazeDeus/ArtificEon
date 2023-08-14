@@ -74,7 +74,7 @@ An Admin/Manager Account is Required in Order to Create/Edit/Delete a Blog Post.
 -> After Logging in, New Post Action Button can be Found at Route "/blog".
 
 <b>Edit/Delete Blog Post:</b><br>
--> Edit/Delete Action Button can be Found at Route "/blog/{blogSlug}/view".
+-> After Logging in, Edit/Delete Action Button can be Found at Route "/blog/{blogSlug}/view".
 
 
 ## Known Issues
