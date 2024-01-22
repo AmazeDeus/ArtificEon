@@ -1,10 +1,10 @@
 # ArtificEon
 
-A Functional Blog Website Design with Protected Routes and Pusher Integration. The Protected Admin route allows for Admins, Managers and Employees to create notes and assign new roles to different users. Pusher is integrated to allow for real-time communication between clients when creating or editing a Blog Post.
+A Standard Blog Website Design with Protected Routes and Pusher Integration. The Protected Admin route allows for Admins, Managers and Employees to create notes and assign new roles to different users. Pusher is integrated to allow for real-time communication between clients when creating or editing a Blog Post.
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/M4thDJ/ArtificEon.git`
+1. Clone the repository: `git clone https://github.com/AmazeDeus/ArtificEon.git`
    
 3. Install the dependencies: `npm install`
 <br>
