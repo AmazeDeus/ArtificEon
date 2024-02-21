@@ -2,6 +2,9 @@
 
 A Standard Blog Website Design with Protected Routes and Pusher Integration. The Protected Admin route allows for Admins, Managers and Employees to create notes and assign new roles to different users. Pusher is integrated to allow for real-time communication between clients when creating or editing a Blog Post.
 
+<h2>Note</h2>
+This repository has been archived and won't receive further updates.
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/AmazeDeus/ArtificEon.git`
@@ -79,7 +82,7 @@ An Admin/Manager Account is Required in Order to Create/Edit/Delete a Blog Post.
 
 ## Known Issues
 
-- Currently there is an issue with how the Blog Post Editor unmounts. A brute force fix has been implemented by refreshing the page after being redirected away. This fix works until the underlying cause has been found.
+- Currently there is an issue with how the Blog Post Editor unmounts. A brute force fix has been implemented by refreshing the page after being redirected away.
 
 ## Contributing
 
